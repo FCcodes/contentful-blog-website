@@ -4,15 +4,8 @@ import Image from 'next/image'
 
 import { Box, Grid, Typography } from '@mui/material'
 
-//json
-import blogs from "../public/assets/json/blogs"
-
 //component
 import Blog from "../components/blog"
-
-//react 
-import { useEffect } from 'react'
-
 
 export default function Home({ articles }) {
   
@@ -70,10 +63,6 @@ export async function getServerSideProps(){
     const res = await fetch(api)
     const data = await res.json()
     articles = data
-      
-  console.log(articles)
-  
-
 
   return{
     props: {

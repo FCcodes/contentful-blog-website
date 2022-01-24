@@ -34,6 +34,10 @@ const Blog = ({ id, fields, includes }) => {
 
                         case 'italic':
                             element.style.fontStyle = item.type
+                        break;
+
+                        default:
+                            break;
                     }
                 })                
                 div.appendChild(element)
